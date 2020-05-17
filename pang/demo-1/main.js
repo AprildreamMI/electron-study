@@ -14,7 +14,7 @@ app.on('ready', () => {
   })
 
   // 加载html页面
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('./newWindow.html')
   // 关闭
   mainWindow.on('closed', () => {
     mainWindow = null
