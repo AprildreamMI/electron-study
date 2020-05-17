@@ -8,6 +8,8 @@ let menuTmplate = [
     submenu: [
       {
         label: '精品SPA',
+        // 快捷键
+        accelerator: 'ctrl+n',
         click: () => {
           let win = new BrowserWindow({
             width: 500,
@@ -17,6 +19,7 @@ let menuTmplate = [
             }
           })
 
+          // 是根据所引入的文件判断位置的
           win.loadFile('html/yellow.html')
 
           win.on('closed', () => {

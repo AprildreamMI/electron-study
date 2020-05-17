@@ -1,5 +1,6 @@
 const $btn = document.querySelector('#btn')
 const BrowserWindow = require('electron').remote.BrowserWindow
+const { remote } = require('electron')
 
 window.onload = function () {
   $btn.onclick = () => {
@@ -14,3 +15,23 @@ window.onload = function () {
     })
   }
 }
+
+let rightMenuTemplate = [
+  {
+    label: '复制',
+    accelerator: 'ctrl+c'
+  },
+  {
+    label: '粘贴',
+    accelerator: 'ctrl+v'
+  }
+]
+
+let rightMenu = remote.Menu.buildFromTemplate(rightMenuTemplate)
+
+window.addEventListener('contextmenu', function (e) {
+  e.preventDefault() 
+  rightMenu.popup({
+    window: remote.getCurrentWindow()
+  })
+})
