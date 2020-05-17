@@ -12,9 +12,9 @@ app.on('ready', () => {
       nodeIntegration: true
     }
   })
-
+  // require('./main/menu.js')
   // 加载html页面
-  mainWindow.loadFile('./newWindow.html')
+  mainWindow.loadFile('html/newWindow.html')
   // 关闭
   mainWindow.on('closed', () => {
     mainWindow = null
