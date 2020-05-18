@@ -14,7 +14,7 @@ app.on('ready', () => {
   })
   require('./main/menu.js')
   // 加载html页面
-  mainWindow.loadFile('html/newWindow.html')
+  mainWindow.loadFile('html/link.html')
   // 打开开发者工具
   mainWindow.webContents.openDevTools()
   // 关闭
