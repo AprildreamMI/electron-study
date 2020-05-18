@@ -5,8 +5,11 @@ const { remote } = require('electron')
 window.onload = function () {
   $btn.onclick = () => {
     let newWin = new BrowserWindow({
-      width: 500,
-      height: 500
+      width: 1000,
+      height: 1000,
+      parent: top,
+      modal: true,
+      show: true
     })
     // 路径要注意
     newWin.loadFile('html/yellow.html')

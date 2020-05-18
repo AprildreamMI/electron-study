@@ -16,7 +16,7 @@ app.on('ready', () => {
   // 菜单
   require('./main/menu.js')
   // 加载html页面
-  mainWindow.loadFile('./html/select-file.html')
+  mainWindow.loadFile('./html/newWindow.html')
 
   /* // 在窗口嵌入一个网页
   let view = new BrowserView()
