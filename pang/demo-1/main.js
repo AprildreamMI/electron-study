@@ -18,7 +18,7 @@ app.on('ready', () => {
   // 加载html页面
   mainWindow.loadFile('html/link.html')
 
-  // 在窗口嵌入一个网页
+  /* // 在窗口嵌入一个网页
   let view = new BrowserView()
   mainWindow.setBrowserView(view)
   view.setBounds({
@@ -27,7 +27,7 @@ app.on('ready', () => {
     width: 1000,
     height: 680
   })
-  view.webContents.loadURL('https://jspang.com')
+  view.webContents.loadURL('https://jspang.com') */
 
   // 打开开发者工具
   mainWindow.webContents.openDevTools()

@@ -12,6 +12,13 @@ $bilibili.onclick = function (e) {
 }
 
 $btn.onclick = function (e) {
-  window.open('https://jspang.com')
+  // window.open('https://jspang.com')
+  window.open('../html/son.html')
 }
+
+window.addEventListener('message', (mes) => {
+  let $sonTxt = document.querySelector('.son_txt')
+
+  $sonTxt.innerHTML = mes.data
+})
 
